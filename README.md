@@ -71,7 +71,7 @@ The TransGCF model is defined in `TransGCF.py`, which contains all necessary mod
 - **HFEB**: High-Frequency Enhancement Block
 - **GCNBranch**: Graph Convolutional Network branch for spectral processing
 - **GatingNetwork**: Gating fusion network
-- 
+
 ## Acknowledgments
 
 This work is built upon the excellent foundation provided by:
