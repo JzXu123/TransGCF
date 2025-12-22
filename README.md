@@ -9,10 +9,6 @@ TransGCF integrates three key components through gating networks:
 - **HFEB**: High-Frequency Enhancement Block
 - **GCNBranch**: Graph Convolutional Network branch for spectral processing
 
-The framework consists of three layers:
-1. **Encoder Layer**: Extracts multi-scale spatial-spectral features
-2. **Middle Layer**: Processes intermediate representations
-3. **Decoder Layer**: Reconstructs the input for anomaly detection
 
 ## Installation
 
