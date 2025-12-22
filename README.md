@@ -1,7 +1,6 @@
 # TransGCF
 
 This repository contains the implementation of **TransGCF**, a framework for hyperspectral anomaly detection. 
-The code will be released upon acceptance; the article is currently under review by the JSTRAS journal.
 ## Framework Overview
 
 TransGCF integrates three key components through gating networks:
@@ -72,4 +71,14 @@ The TransGCF model is defined in `TransGCF.py`, which contains all necessary mod
 - **HFEB**: High-Frequency Enhancement Block
 - **GCNBranch**: Graph Convolutional Network branch for spectral processing
 - **GatingNetwork**: Gating fusion network
+- 
+## Acknowledgments
+
+This work is built upon the excellent foundation provided by:
+
+- **MSNet**: Self-Supervised Multiscale Network with Enhanced Separation Training for Hyperspectral Anomaly Detection
+  - Paper: [IEEE Transactions on Geoscience and Remote Sensing (TGRS)](https://ieeexplore.ieee.org/document/10551851)
+  - Official Implementation: [https://github.com/enter-i-username/MSNet](https://github.com/enter-i-username/MSNet)
+
+We gratefully acknowledge the authors of MSNet for their open-source implementation, which provided valuable insights and code structure for the development of TransGCF.
 
