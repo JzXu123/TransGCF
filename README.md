@@ -1,3 +1,79 @@
 # TransGCF
-This is the official implementation of the paper: TransGCF: Frequency-Suppressed Reconstruction for Hyperspectral Anomaly Detection.
-TransGCF introduces a frequency-suppressed reconstruction framework that integrates Local Transformer, Graph Convolutional Network (GCN), and a High-Frequency Elimination Block (HFEB) to enhance the detection of anomalies in hyperspectral imagery by improving background reconstruction and amplifying residual contrast.
+
+This repository contains the implementation of **TransGCF**, a framework for hyperspectral anomaly detection.
+
+## Framework Overview
+
+TransGCF integrates three key components through gating networks:
+- **MS_GELRSA**: Multi-Scale Graph-Enhanced Local Region Self-Attention
+- **HFEB**: High-Frequency Enhancement Block
+- **GCNBranch**: Graph Convolutional Network branch for spectral processing
+
+The framework consists of three layers:
+1. **Encoder Layer**: Extracts multi-scale spatial-spectral features
+2. **Middle Layer**: Processes intermediate representations
+3. **Decoder Layer**: Reconstructs the input for anomaly detection
+
+## Installation
+
+### Requirements
+
+- Python 3.7+
+- PyTorch 1.13+
+- CUDA (for GPU acceleration)
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Dataset
+
+This release includes support for the **abu-urban-4** dataset. The dataset file (`abu-urban-4.mat`) should be placed in the `dataset/abuu4/` directory.
+
+The dataset should contain:
+- `data`: Hyperspectral image data (H × W × Bands)
+- `map`: Ground truth anomaly map (H × W)
+
+## Usage
+
+### Training
+
+To train the TransGCF model on the abu-urban-4 dataset:
+
+```bash
+python main.py
+```
+
+### Configuration
+
+You can modify the hyperparameters in `main.py`:
+
+```python
+lmda = 1e-3          # Regularization parameter
+num_bs = 64          # Number of selected bands
+lr = 1e-3            # Learning rate
+epochs = 10          # Number of epochs per iteration
+output_iter = 15     # Output iteration (early stopping)
+max_iter = 30        # Maximum iterations
+data_norm = True     # Whether to normalize data
+```
+
+## Results
+
+After training, results will be saved in the `results/TransGCF/` directory:
+- `{dataset_name}_roc.pdf`: ROC curve
+- `{dataset_name}_metrics.csv`: Detailed metrics (PD, PF values)
+- `{dataset_name}_fpr_data.csv`: FPR and TPR data for ROC curve
+
+## Model Architecture
+
+The TransGCF model is defined in `TransGCF.py`, which contains all necessary modules:
+
+- **TransGCF**: Main model class implementing the three-layer gating fusion structure
+- **MS_GELRSA**: Multi-Scale Graph-Enhanced Local Region Self-Attention
+- **HFEB**: High-Frequency Enhancement Block
+- **GCNBranch**: Graph Convolutional Network branch for spectral processing
+- **GatingNetwork**: Gating fusion network
+
