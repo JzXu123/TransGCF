@@ -1,7 +1,7 @@
 # TransGCF
 
-This repository contains the implementation of **TransGCF**, a framework for hyperspectral anomaly detection.
-
+This repository contains the implementation of **TransGCF**, a framework for hyperspectral anomaly detection. 
+The code will be released upon acceptance; the article is currently under review by the JSTRAS journal.
 ## Framework Overview
 
 TransGCF integrates three key components through gating networks:
