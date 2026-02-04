@@ -82,6 +82,9 @@ This work is built upon the excellent foundation provided by:
   - Official Implementation: [https://github.com/enter-i-username/MSNet](https://github.com/enter-i-username/MSNet)
 ## Citation
 If you find this work useful in your research, please cite our paper:
+
 J. Xu et al., "TransGCF: A Unified Spatial-Spectral-Frequency Framework for Robust Hyperspectral Anomaly Detection," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, doi: 10.1109/JSTARS.2026.3660283
+
+
 We gratefully acknowledge the authors of MSNet for their open-source implementation, which provided valuable insights and code structure for the development of TransGCF.
 
