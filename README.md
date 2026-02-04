@@ -1,5 +1,6 @@
 # TransGCF
-
+TransGCF: A Unified Spatial-Spectral-Frequency Framework for Robust Hyperspectral Anomaly Detection
+DOI: 10.1109/JSTARS.2026.3660283| (https://ieeexplore.ieee.org/document/11370489)
 This repository contains the implementation of **TransGCF**, a framework for hyperspectral anomaly detection. 
 ## Framework Overview
 
@@ -79,6 +80,8 @@ This work is built upon the excellent foundation provided by:
 - **MSNet**: Self-Supervised Multiscale Network with Enhanced Separation Training for Hyperspectral Anomaly Detection
   - Paper: [IEEE Transactions on Geoscience and Remote Sensing (TGRS)](https://ieeexplore.ieee.org/document/10551851)
   - Official Implementation: [https://github.com/enter-i-username/MSNet](https://github.com/enter-i-username/MSNet)
-
+## Citation
+If you find this work useful in your research, please cite our paper:
+J. Xu et al., "TransGCF: A Unified Spatial-Spectral-Frequency Framework for Robust Hyperspectral Anomaly Detection," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, doi: 10.1109/JSTARS.2026.3660283
 We gratefully acknowledge the authors of MSNet for their open-source implementation, which provided valuable insights and code structure for the development of TransGCF.
 
