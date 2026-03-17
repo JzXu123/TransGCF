@@ -133,26 +133,6 @@ def separation_training(x: torch.Tensor, gt: np.ndarray, model, loss, mask, opti
             auc_pd_pf, auc_pf_tau, auc_pd_tau, pf_values, pd_values = calculate_all_metrics(np_dm, gt)
             pf_auc = calculate_pf_auc(np_dm, gt)
 
-        if auc_pd_pf > best_auc:
-            best_auc = auc_pd_pf
-            best_dm = np_dm.copy()
-            best_pd_values = pd_values.copy()
-            best_pf_values = pf_values.copy()
-            best_model_state = model.state_dict().copy()
-            best_model_output = model_output.cpu().numpy()
-            best_metrics = {
-                'auc_pd_pf': auc_pd_pf,
-                'auc_pf_tau': auc_pf_tau,
-                'auc_pd_tau': auc_pd_tau,
-                'pf_auc': pf_auc,
-                'pf_values': pf_values.copy(),
-                'pd_values': pd_values.copy()
-            }
-            
-            if verbose:
-                print(f'New best model at iteration {i} with loss: {min_loss:.4f}')
-                print(f'AUC(PD,PF): {auc_pd_pf:.4f}, AUC(PF,τ): {auc_pf_tau:.4f}, AUC(PD,τ): {auc_pd_tau:.4f}')
-
         mask.update(dm.detach())
         history.append(auc)
 
